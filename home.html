@@ -13,60 +13,62 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            scroll-behavior: smooth; /* التمرير السلس */
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0;
         }
 
-        /* تنسيق قسم الترحيب الرئيسي */
-        .main-section {
+        /* 1. تنسيق قسم الترحيب والمعلومات (الصفحة الأولى) */
+        .info-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; /* ليغطي الشاشة كاملة */
+            min-height: 100vh; /* يغطي الشاشة بالكامل */
             text-align: center;
             padding: 40px 20px;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #FFD70033;
+            background-color: #151515;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
         }
-        .main-section h1 {
+        .info-section h1 {
             color: #FFD700;
             font-size: 3em;
             margin-bottom: 15px;
-            text-shadow: 0 0 15px #FFD700B3; /* توهج ذهبي */
+            text-shadow: 0 0 15px #FFD700B3;
         }
-        .main-section p {
-            color: #B8B8B8;
-            font-size: 1.2em;
-            margin-bottom: 30px;
+        .info-section h2 {
+            color: #E0E0E0;
+            font-size: 1.8em;
+            border-bottom: 2px dotted #5C5C5C;
+            padding-bottom: 10px;
+            margin-top: 30px;
         }
-
-        /* تنسيق زر التمرير */
-        .link-cta {
-            display: inline-block;
-            background-color: #FFD700;
-            color: #0A0A0A;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        .info-section li {
+            background-color: #0A0A0A;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-right: 4px solid #FFD700;
+            border-radius: 4px;
             font-size: 1.1em;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 0 10px #FFD70077;
+            color: #B8B8B8;
         }
-        .link-cta:hover {
-            background-color: #FFFFFF;
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px #FFD700AA;
+        .info-section li strong {
+            color: #FFFFFF;
+            font-weight: bold;
         }
 
-        /* ------------------------------------- */
-        /* أنماط قسم الرتب (من ranks.html) */
-        /* ------------------------------------- */
-        
+        /* 2. تنسيق قسم الرتب (بعد التمرير) */
         .ranks-section {
             padding: 80px 20px;
             padding-top: 50px; 
@@ -140,14 +142,19 @@
 <body>
     <div class="container">
 
-        <section class="main-section">
+        <section class="info-section">
             <h1>أهلاً بك في 𝑲𝑼𝑹𝑨𝑴𝑨 🌑</h1>
-            <p>مجتمع النخبة والقيادة. اكتشف من يحكم ويقرر مصير هذه المنظمة.</p>
+            <p style="font-size: 1.3em; color: #E0E0E0; margin-bottom: 30px;">مجتمع النخبة والقيادة العليا.</p>
             
-            <a href="#ranks-anchor" class="link-cta">اطلع على الرتب العليا</a>
+            <h2>📜 نبذة عن القيادة</h2>
+            <ul>
+                <li><strong>الرؤية:</strong> تحقيق الهيمنة المطلقة والسيطرة على جميع الموارد العالمية.</li>
+                <li><strong>الهدف الأسمى:</strong> ضمان التفوق المطلق على جميع المنافسين في جميع الميادين.</li>
+                <li><strong>الأعضاء:</strong> نخبة مختارة من الأفراد ذوي القدرات الاستثنائية والولاء المطلق.</li>
+            </ul>
         </section>
 
-        <section id="ranks-anchor" class="ranks-section">
+        <section class="ranks-section">
             <header>
                 <h2>الرتب العليا</h2>
                 <p>قادة منظمة KURAMA</p>
